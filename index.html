@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Students</title>
+  <meta name="author" content="">
+  <meta name="description" content="app">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="manifest" href="manifest.json"> 
+  <link rel="members" href="members.json">  
+  <link rel="javascript" href="javascript.js"> 
+  <link rel="mystyle" href="mystyle.css"> 
+</head>
+
+<body>
+    <h1>Students and teachers</h1>
+    <img src="nina.png" alt="Student">
+    <img src="olivia.png" alt="Student">
+    <img src="morten.png" alt="Teacher"> 
+
+
+<script>
+    // Asking the browser if it supports service worker
+    if ('serviceWorker' in navigator) {
+        console.log("Serviceworker is avilable")
+        // the serviceworker er en javaScriptfil. 
+        // du skal have /cats/ foran serviceworker.js, da det er en sub-file. 
+        navigator.serviceWorker.register("/students/serviceworker.js"); 
+    } else {
+        console.log("Serviceworker is NOT avilable")
+    }
+</script>
+
+</body>
+
+</html> 
